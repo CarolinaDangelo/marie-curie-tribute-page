@@ -424,7 +424,11 @@ a {
         font-size: 3rem;
         font-family: var(--font-logo);
         line-height: 3rem;
-        padding: 40px 0;
+        padding-bottom: 40px;
+    }
+
+    .about-content p {
+        font-size: 1.2em;
     }
 
     .timeline {
@@ -443,5 +447,13 @@ a {
 
     .timeline ul li p {
         font-size: 0.9em;
+    }
+
+    .quote p {
+        font-size: 1.2em;
+    }
+
+    .title-timeline {
+        font-size: 3.5em;
     }
 }
