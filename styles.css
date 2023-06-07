@@ -362,6 +362,7 @@ a {
 
     .cerrar-menu {
         color: var(--verde-neon);
+        width: 50px;
     }
 
     header {
@@ -416,14 +417,14 @@ a {
     .cuadros-container {
         display: flex;
         flex-direction: column;
-        padding: 20px;
+        padding: 50px 20px 0 20px;
         align-items: center;
     } 
     
     .about-content h3 {
         font-size: 3rem;
         font-family: var(--font-logo);
-        line-height: 3rem;
+        line-height: 3.5rem;
         padding-bottom: 40px;
     }
 
@@ -455,5 +456,17 @@ a {
 
     .title-timeline {
         font-size: 3.5em;
+    }
+
+    .resources {
+        font-size: 3em;
+    }
+
+    a {
+        font-size: 2em;
+    }
+
+    footer, p {
+        font-size: 1em;
     }
 }
