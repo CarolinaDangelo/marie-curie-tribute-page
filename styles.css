@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Milonga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+:root {
+    --verde-neon: #52df43;
+    --azul-oscuro: #0f1925;
+    --font-logo: 'Milonga', cursive;
+    --font-texto: 'Poppins', sans-serif;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--azul-oscuro);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(15, 25, 37, 0.8);
+    padding: 10px;
+    z-index: 999;
+}
+
+.logo {
+    max-width: 10rem;
+    padding: 15px 15px;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-list li a {
+    padding: 25px;
+    text-decoration: none;
+    color: var(--verde-neon);
+    text-transform: uppercase;
+    font-family: var(--font-texto);
+    font-size: 2em;
+}
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+    padding: 30px;
+}
+
+.nav.visible {
+    z-index: 9999;
+}
+
+.nav.visible .nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.nav.visible .nav-list li {
+    margin-bottom: 2rem;
+}
+
+.nav.visible .nav-list li a {
+    color: var(--verde-neon);
+    font-family: var(--font-texto);
+    font-size: 1rem;
+}
+
+.nav.visible .nav-list li a:hover {
+    text-shadow: 2px 2px 40px var(--verde-neon);
+}
+
+.nav-list li a:hover {
+    text-shadow: 2px 2px 40px var(--verde-neon);
+}
+
+.home {
+    background-color: var(--azul-oscuro);
+    background-image: linear-gradient(to bottom, transparent, var(--azul-oscuro)),
+        url("img/MarieCurie.jpg");
+    background-position: left;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    min-height: 60rem;
+}
+
+h1 {
+    font-family: var(--font-logo);
+    color: var(--white);
+    font-size: 5em;
+    width: 60%;
+    max-width: 30rem;
+    margin-top: 30rem;
+    margin-left: 8rem;
+    margin-bottom: 0;
+}
+
+h1:hover {
+    text-shadow: 2px 2px 40px var(--verde-neon);
+}
+
+h2 {
+    font-family: var(--font-texto);
+    color: var(--white);
+    font-size: 1.8em;
+    max-width: 40rem;
+    margin-left: 8rem;
+    margin-top: 0;
+}
+
+h2:hover {
+    text-shadow: 2px 2px 40px var(--verde-neon);
+}
+
+.section-about {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    margin-top: 8rem;
+}
+
+.radio {
+    color: var(--verde-neon);
+    font-weight: 700;
+}
+
+.apodo {
+    display: block;
+    color: var(--verde-neon);
+    padding-bottom: 20px;
+}
+
+.apodo:hover {
+    text-shadow: 2px 2px 40px var(--verde-neon);
+}
+
+.about-content h3 {
+    font-size: 3.5rem;
+    font-family: var(--font-logo);
+    line-height: 4rem;
+    padding: 40px 0;
+}
+
+.about-content p {
+    font-family: var(--font-texto);
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+body {
+    background-color: var(--azul-oscuro);
+}
+
+.cuadros-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.cuadros-container img {
+    width: 350px;
+    padding: 20px;
+}
+
+/* Timeline */
+
+.title-timeline {
+    font-size: 3rem;
+    font-family: var(--font-logo);
+    line-height: 4rem;
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 4em;
+    padding: 20px;
+    color: var(--white);
+}
+
+.timeline {
+    position: relative;
+    margin: 50px auto;
+    padding: 40px 0;
+    width: 1000px;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: var(--white);
+}
+
+.timeline ul {
+    margin: 0;
+    padding: 0;
+}
+
+.timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.timeline ul li:nth-child(odd) {
+    float: left;
+    text-align: right;
+    clear: both;
+}
+
+.timeline ul li:nth-child(even) {
+    float: right;
+    text-align: left;
+    clear: both;
+}
+
+.content {
+    padding-bottom: 20px;
+}
+
+.timeline ul li:nth-child(odd):before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: -6px;
+    width: 10px;
+    height: 10px;
+    background: var(--verde-neon);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(rgba(153, 255, 58, 0.8));
+}
+
+.timeline ul li:nth-child(even):before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: -4px;
+    width: 10px;
+    height: 10px;
+    background: var(--verde-neon);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(rgba(153, 255, 58, 0.8));
+}
+
+.timeline ul li h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-family: var(--font-logo);
+    color: var(--verde-neon);
+    font-size: 2em;
+}
+
+.timeline ul li p {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-texto);
+    color: var(--white);
+    font-size: 1.4em;
+}
+
+.quote {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.quote p {
+    text-align: center;
+    color: var(--white);
+    font-family: var(--font-texto);
+    font-size: 2em;
+    width: 70%;
+}
+
+.firma {
+    color: var(--verde-neon);
+}
+
+.resources-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 30px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-texto);
+    font-size: 2em;
+    text-transform: uppercase;
+  }
+
+  a:hover {
+    text-shadow: 2px 2px 40px var(--verde-neon);
+  }
+
+  ul {
+    list-style-type: none;
+  }
+  
+  .quimica, .radioactividad, .github {
+    color: #52df43;
+  }
+
+  footer {
+    background-color: var(--verde-neon);
+    color: var(--azul-oscuro);
+    text-align: center;
+    padding: 10px;
+    font-family: var(--font-texto);
+    font-weight: 700;
+    font-size: 1.3em;
+  }
+  
+
+/** Responsive design **/
+
+@media screen and (max-width: 768px) {
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: var(--verde-neon);
+    }
+
+    .cerrar-menu {
+        color: var(--verde-neon);
+    }
+
+    header {
+        background-color: rgba(15, 25, 37, 0.8);
+        position: fixed;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        color: var(--verde-neon);
+        padding: 2rem;
+        background: var(--azul-oscuro);
+    }
+
+    ul.nav-list {
+        background-color: var(--azul-oscuro);
+        margin: 0 20px;
+        width: 107%;
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+        z-index: 9999;
+        background-color: var(--azul-oscuro);
+        padding: 2rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a {
+        color: var(--verde-neon);
+        font-family: var(--font-texto);
+    }
+
+    .home {
+        background-position: center;
+    }
+
+    .cuadros-container {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+    } 
+    
+    .about-content h3 {
+        font-size: 3rem;
+        font-family: var(--font-logo);
+        line-height: 3rem;
+        padding: 40px 0;
+    }
+
+    .timeline {
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+    }
+
+    .timeline-content {
+        text-align: center;
+    }
+}
