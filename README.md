@@ -1,5 +1,5 @@
 # Marie Curie tribute page
-Tribute Page for FreeCodeCamp.org Certification.
+Tribute Page for FreeCodeCamp.org Certification
 
 <img src="https://github.com/CarolinaDangelo/marie-curie-tributo/blob/8d38476fb5ad9803984ba4a3097a7fe0f7d991f2/img/Captura.jpg"></img>
 
